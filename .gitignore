@@ -10,6 +10,7 @@
 *.xlsx
 *.h5
 *.jpg
+*.jpeg
 *.npy
 *.pptx
 *.png
