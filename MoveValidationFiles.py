@@ -7,9 +7,6 @@ heroes = ['ant_man', 'super_man', 'iron_man', 'bat_man', 'captain_america',
 # Create folders for each breed
 for i in heroes:
     directory = './CAX_Superhero_Train/' + i
-#    print directory
-#    print len(os.listdir(directory))
-#    print int(round(len(os.listdir(directory))*.7))
     print directory
     directory = './CAX_Superhero_Train/train/' + i
     if not os.path.exists(directory):
@@ -26,9 +23,9 @@ validation_totals = []
 
 for i in heroes:
     directory = './CAX_Superhero_Train/' + i
-    print int(round((len(os.listdir(directory))-1)*.7))
-    train_totals.append(int(round((len(os.listdir(directory))-1)*.7)))
-    print int(round(len(os.listdir(directory))))-1-int(round((len(os.listdir(directory))-1)*.7))
+    print int(round((len(os.listdir(directory))-1)*.8))
+    train_totals.append(int(round((len(os.listdir(directory))-1)*.8)))
+    print int(round(len(os.listdir(directory))))-1-int(round((len(os.listdir(directory))-1)*.8))
     validation_totals.append(int(round(len(os.listdir(directory))))-1-int(round((len(os.listdir(directory))-1)*.7)))
 
 print sum(train_totals)
@@ -39,7 +36,7 @@ for i in heroes:
     directory = './CAX_Superhero_Train/' + i
     src_files = os.listdir(directory)
     for x in range(1, int(round(len(os.listdir(directory))))):
-        if x < int(round(len(os.listdir(directory))*.7)):
+        if x < int(round(len(os.listdir(directory))*.8)):
             print x
             dest = './CAX_Superhero_Train/train/' + i + '/' + src_files[x]
             print dest
