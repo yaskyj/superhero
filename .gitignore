@@ -15,6 +15,7 @@
 *.pptx
 *.png
 *.db
+*config.py
 
 #Mac files
 .DS_Store
